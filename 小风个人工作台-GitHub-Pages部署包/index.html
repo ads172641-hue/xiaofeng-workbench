@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="application-name" content="个人工作台">
+  <meta name="generator" content="新岛个人工作台搭建器 V1.1">
+  <meta name="theme-color" content="#6D91A9">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNiIgZmlsbD0iIzZEOTFBOSIvPgogIDxjaXJjbGUgY3g9IjQwNiIgY3k9IjEwNCIgcj0iMzgiIGZpbGw9IiNDOERDRTkiIG9wYWNpdHk9Ii45Ii8+CiAgPHBhdGggZD0iTTEzMiAxMTZoMjQ4YzI1IDAgNDQgMTkgNDQgNDR2MjM2SDE3NmMtMzggMC02OC0zMC02OC02OFYxNjBjMC0yNSAxOS00NCA0NC00NFoiIGZpbGw9IiNGRkZFRjgiLz4KICA8cGF0aCBkPSJNMTA4IDMyOGMwLTM3IDMwLTY3IDY3LTY3aDI0OXYxMzVIMTc1Yy0zNyAwLTY3LTMwLTY3LTY4WiIgZmlsbD0iI0UxRUJGMSIvPgogIDxwYXRoIGQ9Ik0xNzQgMzI4aDE3MCIgc3Ryb2tlPSIjMzE0QzVEIiBzdHJva2Utd2lkdGg9IjIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTc0IDI3OGgxMTIiIHN0cm9rZT0iIzczOTVBQSIgc3Ryb2tlLXdpZHRoPSIxOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTE3OCAyMTRoMTUwIiBzdHJva2U9IiNBNkJGQ0UiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0zNDUgMzI2Yy05LTQ4IDEwLTg3IDU2LTExMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNUM4QjczIiBzdHJva2Utd2lkdGg9IjE4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMzY1IDI3NGMtMzUtMy01NC0yMS01OS01NCAzNCAxIDU0IDE4IDU5IDU0Wm0yMS0zM2MtMy0zNCAxMy01NiA0Ni02NiA0IDMzLTEyIDU2LTQ2IDY2WiIgZmlsbD0iIzgzQUU5OCIvPgo8L3N2Zz4K">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="icon" href="data:,">
+  <title>小风的个人工作台</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <video class="wallpaper" id="wallpaper-video" src="./assets/wallpaper.mp4" poster="./assets/wallpaper-poster.jpg" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>
+  <div class="wallpaper-wash" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" aria-label="工作台导航">
+      <div class="clock-pill" id="clock-pill">--:--</div>
+      <nav class="nav" id="nav"></nav>
+      <div class="brand">
+        <div class="brand-mark">风</div>
+        <div><strong id="brand-title">个人工作台</strong><span>新岛 AI · 软件版 V1.1</span></div>
+      </div>
+      <div class="sidebar-foot">数据只保存在当前浏览器<br>换设备前记得导出备份</div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-lockup">
+          <div class="page-icon" id="page-icon" aria-hidden="true"></div>
+          <div><h1 id="view-title">个人工作台</h1><div class="eyebrow" id="view-kicker">属于你的生活与工作中心</div></div>
+        </div>
+        <div class="topbar-status">
+          <button class="button soft wallpaper-toggle" id="wallpaper-toggle" type="button" aria-label="暂停动态壁纸" aria-pressed="false"><span id="wallpaper-toggle-glyph" aria-hidden="true">Ⅱ</span><span class="wallpaper-label" id="wallpaper-toggle-label">暂停壁纸</span></button>
+          <button class="button soft install-app-button" id="install-app-button" type="button" aria-label="安装个人工作台 App">
+            <span id="install-app-icon" aria-hidden="true"></span><span class="install-label">安装 App</span>
+          </button>
+          <div class="date-pill" id="date-pill"></div>
+          <div class="signal" aria-label="本地工作台运行正常">
+            <span></span><span></span><span></span><span></span><i class="wifi-icon" id="wifi-icon" aria-hidden="true"></i>
+          </div>
+        </div>
+      </header>
+      <div class="storage-warning" id="storage-warning" role="status" hidden>浏览器暂时无法保存数据。当前仍可使用，请在设置中导出 JSON，关闭页面前保留备份。</div>
+      <div class="view" id="view-root" aria-live="polite"></div>
+      <div class="footer-note">新岛个人工作台 PWA V1.1 · 本地保存 · 可安装 · 随时导出</div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
